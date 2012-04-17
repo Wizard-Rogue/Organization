@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  id: 1
+  lat: 1.5
+  lng: 1.5
+  description: MyString
+  img_url: MyString
+  password: MyString
+  secretQ: 1
+  secretA: MyString
+
+two:
+  name: MyString
+  id: 1
+  lat: 1.5
+  lng: 1.5
+  description: MyString
+  img_url: MyString
+  password: MyString
+  secretQ: 1
+  secretA: MyString

@@ -1,0 +1,47 @@
+<%- model_class = @org.class -%>
+<h1><%=t '.title', :default => model_class.model_name.human %></h1>
+
+<p>
+  <strong><%= model_class.human_attribute_name(:name) %>:</strong><br>
+  <%= @org.name %>
+</p>
+<p>
+  <strong><%= model_class.human_attribute_name(:lat) %>:</strong><br>
+  <%= @org.lat %>
+</p>
+<p>
+  <strong><%= model_class.human_attribute_name(:lng) %>:</strong><br>
+  <%= @org.lng %>
+</p>
+<p>
+  <strong><%= model_class.human_attribute_name(:description) %>:</strong><br>
+  <%= @org.description %>
+</p>
+<p>
+  <strong><%= model_class.human_attribute_name(:img_url) %>:</strong><br>
+  <%= @org.img_url %>
+</p>
+<p>
+  <strong><%= model_class.human_attribute_name(:password) %>:</strong><br>
+  <%= @org.password %>
+</p>
+<p>
+  <strong><%= model_class.human_attribute_name(:secretQ) %>:</strong><br>
+  <%= @org.secretQ %>
+</p>
+<p>
+  <strong><%= model_class.human_attribute_name(:secretA) %>:</strong><br>
+  <%= @org.secretA %>
+</p>
+
+<div class="form-actions">
+  <%= link_to t('.back', :default => t("helpers.links.back")),
+              orgs_path, :class => 'btn'  %>
+  <%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_org_path(@org), :class => 'btn' %>
+  <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              org_path(@org),
+              :method => 'delete',
+              :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')),
+              :class => 'btn btn-danger' %>
+</div>
