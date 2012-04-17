@@ -33,12 +33,43 @@
     </div>
   </div>
 
-<div class="container">
-  <div class="row">
-    <div class="span2"><h2>Insert Content here</h2><p>You can place stuff here. A map is probably awsome here</p></div>
+<div class="container-fluid">
+  <div class="row-fluid">
+    <div class="span2">
+      <h3>This can act as a nav-bar of some sort</h3>
+      <ul class="nav nav-pills nav-stacked" style="background-color: #BBD8E9; border; border-radius: 1em">
+	<li class="Active"><a href="#">Button1</a></li>
+	<li class="Active"><a href="#">Pwet ni Vlad</a></li>
+	<li class="Active"><a href="#">Seriously, sana maganda</a></li>
+      </ul>
+    </div>
     <div class="span8"> <%= yield %> </div>
     <div class="span2"><h3>Ticker</h3><p><blockquote>This place can probably work as a ticker. Or something as awesomecakes.</blockquote></p></div>
   </div>
+  <div class="row-fluid">
+    <div class="span4">
+      <div class="hero-unit">
+	<h1>Awesome content!</h1>
+	<blockquote>There's stuff here and you might want to press le button to find out moar.</blockquote>
+	<a class="btn btn-primary btn-large">Click here</a>
+      </div>
+    </div>
+    <div class="span4">
+      <div class="hero-unit">
+	<h1>Awesome content!</h1>
+	<p><blockquote>There's stuff here and you might want to press le button to find out moar.</blockquote></p>
+	<a class="btn btn-primary btn-large">Click here</a>
+      </div>
+    </div>
+    <div class="span4">
+      <div class="hero-unit">
+	<h1>Awesome content!</h1>
+	<p>There's stuff here and you might want to press le button to find out moar.</p>
+	<a class="btn btn-primary btn-large">Click here</a>
+      </div>
+    </div>
+  </div>
 </div>
+
 </body>
 </html>
