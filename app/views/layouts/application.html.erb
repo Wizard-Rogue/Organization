@@ -44,7 +44,15 @@
       </ul>
     </div>
     <div class="span8" style="background-color: #DCEAF4; border; border-radius: 0.5em"> <%= yield %> </div>
-    <div class="span2"><h3>Ticker</h3><p><blockquote>This place can probably work as a ticker. Or something as awesomecakes.</blockquote></p></div>
+    <div class="span2"><h3>Ticker</h3><p>
+<% if current_user %>
+  Welcome <%= current_user.name %>!
+  <%= link_to "Sign Out", signout_path %>
+<% else %>
+  <%= link_to "Sign in with Facebook!", "/auth/facebook" %><br/>
+  <%= link_to "Sign in with Twitter!", "/auth/twitter" %>
+<% end %>
+</p></div>
   </div>
   <div class="row-fluid">
   <div id="myCarousel" class="carousel">
