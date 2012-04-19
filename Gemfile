@@ -20,11 +20,13 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 
   gem 'twitter-bootstrap-rails'
-  gem 'omniauth-facebook'
-  gem 'omniauth-twitter'
-  gem 'omniauth-identity'
 end
 
+gem 'faraday'
+gem 'omniauth'
+gem 'omniauth-facebook'
+gem 'omniauth-twitter'
+gem 'omniauth-identity'
 gem 'jquery-rails'
 
 # To use ActiveModel has_secure_password

@@ -20,7 +20,10 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 
   gem 'twitter-bootstrap-rails'
+  gem 'faraday'
+  gem 'omniauth', '~>0.2.2'
   gem 'omniauth-facebook'
+  gem 'omniauth-twitter'
   gem 'omniauth-identity'
 end
 

@@ -1,4 +1,13 @@
 Rails.application.config.middleware.use OmniAuth::Builder do
   provider :facebook, '376969209011426', '827c4c375cf8005bff034b83e350f4a5'
+  provider :twitter, 'TPJKMB0GkKuk6Hd1TvSHyw', 'WaZ6kgCkf7RaABgdb4xrTcB5KgYgcZ5RgWpwdIBog'
   provider :identity
 end
+
+require 'net/https'
+https = Net::HTTP.new('encrypted.google.com', 443)
+https.use_ssl = true
+https.verify_mode = OpenSSL::SSL::VERIFY_PEER
+https.ca_path = '/usr/lib/ssl/certs' if File.exists?('/usr/lib/ssl/certs/ca-certificates.crt') # Ubuntu
+#https.ca_file = '/opt/local/share/curl/curl-ca-bundle.crt' if File.exists?('/opt/local/share/curl/curl-ca-bundle.crt') # Mac OS X
+https.request_get('/')
