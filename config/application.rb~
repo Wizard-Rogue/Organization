@@ -1,8 +1,6 @@
 require File.expand_path('../boot', __FILE__)
 
 require 'rails/all'
-
-OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE
 require 'net/https'
 https = Net::HTTP.new('encrypted.google.com', 443)
 https.use_ssl = true

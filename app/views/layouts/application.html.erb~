@@ -46,10 +46,10 @@
     <div class="span8" style="background-color: #DCEAF4; border; border-radius: 0.5em"> <%= yield %> </div>
     <div class="span2"><h3>Ticker</h3><p>
 <% if current_user %>
-  Welcome <%= current_user.name %>!
+  Welcome <%= link_to current_user.name, current_user.link %>!
   <%= link_to "Sign Out", signout_path %>
 <% else %>
-  <%= link_to "Sign in with Facebook!", "/auth/facebook" %></br>
+  <%= link_to "Sign in with Facebook!", "/auth/facebook" %><br/>
   <%= link_to "Sign in with Twitter!", "/auth/twitter" %>
 <% end %>
 </p></div>
